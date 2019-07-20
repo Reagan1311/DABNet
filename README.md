@@ -22,7 +22,7 @@ cd DABNet
 ```
 
 #### Dataset
-You need to download two dataset, and put the files in the {dataset} folder with following structure.
+You need to download the two dataset——CamVid and Cityscapes, and put the files in the `dataset` folder with following structure.
 ```
 ├── camvid
 |    ├── train
