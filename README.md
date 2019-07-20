@@ -12,6 +12,23 @@ This project contains the code for:  [**DABNet: Depth-wise Asymmetric Bottleneck
 
 As a pixel-level prediction task, semantic segmentation needs large computational cost with enormous parameters to obtain high performance. Recently, due to the increasing demand for autonomous systems and robots, it is significant to make a tradeoff between accuracy and inference speed. In this paper, we propose a novel Depthwise Asymmetric Bottleneck (DAB) module to address this dilemma, which efficiently adopts depth-wise asymmetric convolution and dilated convolution to build a bottleneck structure. Based on the DAB module, we design a Depth-wise Asymmetric Bottleneck Network (DABNet) especially for real-time semantic segmentation, which creates sufficient receptive field and densely utilizes the contextual information. Experiments on Cityscapes and CamVid datasets demonstrate that the proposed DABNet achieves a balance between speed and precision. Specifically, without any pretrained model and postprocessing, it achieves 70.1% Mean IoU on the Cityscapes test dataset with only 0.76 million parameters and a speed of 104 FPS on a single GTX 1080Ti card.
 
+#### Installation
+- Python 3.6.x. Recommended using [Anaconda3](https://www.anaconda.com/distribution/)
+- Set up python environment
+
+```
+pip3 install -r requirements.txt
+```
+
+- Env: PyTorch_0.4.1; cuda_9.0; cudnn_7.1; python_3.6, 
+
+- Clone this repository.
+
+```
+git clone https://github.com/xiaoyufenfei/LEDNet.git
+cd LEDNet-master
+```
+
 #### Dataset
 You need to download two dataset, and put the files in the dataset folder with following structure.
 - You can download [cityscapes](https://www.cityscapes-dataset.com/) from [here](https://www.cityscapes-dataset.com/downloads/). Note: please download [leftImg8bit_trainvaltest.zip(11GB)](https://www.cityscapes-dataset.com/file-handling/?packageID=4) and [gtFine_trainvaltest(241MB)](https://www.cityscapes-dataset.com/file-handling/?packageID=1).
@@ -37,29 +54,6 @@ You need to download two dataset, and put the files in the dataset folder with f
      ├── cityscapes_test_list.txt
      └── cityscapes_val_list.txt           
 ```
-
-#### Installation
-- Python 3.6.x. Recommended using [Anaconda3](https://www.anaconda.com/distribution/)
-- Set up python environment
-
-```
-pip3 install -r requirements.txt
-```
-
-- Env: PyTorch_0.4.1; cuda_9.0; cudnn_7.1; python_3.6, 
-
-- Clone this repository.
-
-```
-git clone https://github.com/xiaoyufenfei/LEDNet.git
-cd LEDNet-master
-```
-
-- Install [Visdom](https://github.com/facebookresearch/visdom).
-- Install [torchsummary](https://github.com/sksq96/pytorch-summary)
-- Download the dataset by following the **Datasets** below.
-- Note: For training, we currently support [cityscapes](https://www.cityscapes-dataset.com/) , aim to add [Camvid](https://github.com/alexgkendall/SegNet-Tutorial/tree/master/CamVid)  and  [VOC](http://host.robots.ox.ac.uk/pascal/VOC/)  and  [ADE20K](http://groups.csail.mit.edu/vision/datasets/ADE20K/)  dataset
-
 
 #### Training
 
