@@ -25,39 +25,28 @@ This project contains the code (Note: The code is test in the environment with p
 The extensive computational burden limits the usage of CNNs in mobile devices for dense estimation tasks, a.k.a semantic segmentation. In this paper, we present a lightweight network to address this problem, namely **LEDNet**, which employs an asymmetric encoder-decoder architecture for the task of real-time semantic segmentation.More specifically, the encoder adopts a ResNet as backbone network, where two new operations, channel split and shuffle, are utilized in each residual block to greatly reduce computation cost while maintaining higher segmentation accuracy. On the other hand, an attention pyramid network (APN) is employed in the decoder to further lighten the entire network complexity. Our model has less than 1M parameters, and is able to run at over 71 FPS on a single GTX 1080Ti GPU card. The comprehensive experiments demonstrate that our approach achieves state-of-the-art results in terms of speed and accuracy trade-off on Cityscapes dataset. and becomes an effective method for real-time semantic segmentation tasks.
 
 #### Project-Structure
-```
-├── datasets  # contains all datasets for the project
-|  └── cityscapes #  cityscapes dataset
-|  |  └── gtCoarse #  Coarse cityscapes annotation
-|  |  └── gtFine #  Fine cityscapes annotation
-|  |  └── leftImg8bit #  cityscapes training image
-|  └── cityscapesscripts #  cityscapes dataset label convert scripts！
-├── utils
-|  └── dataset.py # dataloader for cityscapes dataset
-|  └── iouEval.py # for test 'iou mean' and 'iou per class'
-|  └── transform.py # data preprocessing
-|  └── visualize.py # Visualize with visdom 
-|  └── loss.py # loss function 
-├── checkpoint
-|  └── xxx.pth # pretrained models encoder form ImageNet
-├── save
-|  └── xxx.pth # trained models form scratch 
-├── imagenet-pretrain
-|  └── lednet_imagenet.py # 
-|  └── main.py # 
-├── train
-|  └── lednet.py  # model definition for semantic segmentation
-|  └── main.py # train model scripts
-├── test
-|  |  └── dataset.py 
-|  |  └── lednet.py # model definition
-|  |  └── lednet_no_bn.py # Remove the BN layer in model definition
-|  |  └── eval_cityscapes_color.py # Test the results to generate RGB images
-|  |  └── eval_cityscapes_server.py # generate result uploaded official server
-|  |  └── eval_forward_time.py # Test model inference time
-|  |  └── eval_iou.py 
-|  |  └── iouEval.py 
-|  |  └── transform.py 
+You should make the dataset structure like this.
+  ```
+├── dataset
+      └── camvid
+            ├── train
+            ├── test
+            ├── val 
+            ├── trainannot
+            ├── testannot
+            ├── valannot
+            ├── camvid_trainval_list.txt
+            ├── camvid_train_list.txt
+            ├── camvid_test_list.txt
+            └── camvid_val_list.txt
+      └── cityscapes
+            ├── gtCoarse
+            ├── gtFine
+            ├── leftImg8bit
+            ├── cityscapes_trainval_list.txt
+            ├── cityscapes_train_list.txt
+            ├── cityscapes_test_list.txt
+            └── cityscapes_val_list.txt           
 ```
 
 #### Installation
