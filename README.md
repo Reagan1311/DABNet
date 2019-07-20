@@ -99,13 +99,10 @@ python test.py --dataset ${camvid, cityscapes} --checkpoint ${CHECKPOINT_FILE}
 
 #### Results
 
-- Please refer to our article for more details.
+- quantitative result
+https://www.cityscapes-dataset.com/anonymous-results/?id=16896cc219a6d5af875f8aa3d528a0f7c4ce57644aece957938eae9062ed8070
 
-|Method|Dataset|Fine|Coarse| IoU_cla |IoU_cat|FPS|
-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-|**LEDNet**|**cityscapes**|yes|yes|**70.6​%**|**87.1​%​**|**70​+​**|
-
-qualitative segmentation result examples:
+- qualitative segmentation examples:
 
 <p align="center"><img width="100%" src="./image/DABNet_demo.png" /></p>
 
