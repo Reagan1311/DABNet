@@ -22,52 +22,45 @@ cd DABNet
 ```
 
 #### Dataset
-You need to download two dataset, and put the files in the dataset folder with following structure.
-- You can download [cityscapes](https://www.cityscapes-dataset.com/) from [here](https://www.cityscapes-dataset.com/downloads/). Note: please download [leftImg8bit_trainvaltest.zip(11GB)](https://www.cityscapes-dataset.com/file-handling/?packageID=4) and [gtFine_trainvaltest(241MB)](https://www.cityscapes-dataset.com/file-handling/?packageID=1).
-- You can download [CityscapesScripts](https://github.com/mcordts/cityscapesScripts), and convert the dataset to [19 categories](https://github.com/mcordts/cityscapesScripts/blob/master/cityscapesscripts/helpers/labels.py). It should have this basic structure.
+You need to download two dataset, and put the files in the {dataset} folder with following structure.
 ```
 ├── camvid
-     ├── train
-     ├── test
-     ├── val 
-     ├── trainannot
-     ├── testannot
-     ├── valannot
-     ├── camvid_trainval_list.txt
-     ├── camvid_train_list.txt
-     ├── camvid_test_list.txt
-     └── camvid_val_list.txt
+|    ├── train
+|    ├── test
+|    ├── val 
+|    ├── trainannot
+|    ├── testannot
+|    ├── valannot
+|    ├── camvid_trainval_list.txt
+|    ├── camvid_train_list.txt
+|    ├── camvid_test_list.txt
+|    └── camvid_val_list.txt
 ├── cityscapes
-     ├── gtCoarse
-     ├── gtFine
-     ├── leftImg8bit
-     ├── cityscapes_trainval_list.txt
-     ├── cityscapes_train_list.txt
-     ├── cityscapes_test_list.txt
-     └── cityscapes_val_list.txt           
+|    ├── gtCoarse
+|    ├── gtFine
+|    ├── leftImg8bit
+|    ├── cityscapes_trainval_list.txt
+|    ├── cityscapes_train_list.txt
+|    ├── cityscapes_test_list.txt
+|    └── cityscapes_val_list.txt           
 ```
 
 #### Training
 
-- For help on the optional arguments you can run: `python train.py -h`
-Basically, in the train.py, you can set the dataset, train_type (on train or ontrainval).
+- For help on the optional arguments you can run: `python train.py -h`.
+Basically, in the `train.py`, you can set the dataset, train_type (on train or ontrainval).
 ```
-python train.py --dataset ${camvid, cityscapes} --train_type ${train, trainval} --max_epochs ${EPOCHS}
+python train.py --dataset ${camvid, cityscapes} --train_type ${train, trainval} --max_epochs ${EPOCHS} --batch_size ${BATCH_SIZE} --lr ${LR}  --resume ${CHECKPOINT_FILE}
 ```
 ##### Here are some examples:
 - train on Cityscapes dataset
 ```
-python train.py --dataset cityscapes 
-```
-- train on Cityscapes dataset (trainval)
-```
-python train.py --dataset camvid --train_type trainval
+python train.py --dataset cityscapes
 ```
 - train on CamVid dataset (trainval)
 ```
-python train.py --dataset camvid --train_type trainval --lr 1e-3 --batch_size 16
+python train.py --dataset camvid --train_type trainval --max_epochs 1000 --lr 1e-3 --batch_size 16
 ```
-
 - During training course, every 50 epochs, the mIoU of train set, validation set and training loss will be recorded and draw a plot, so you can check whether the training process is normal.
 
 Loss vs Epochs            |  Val. Acc. vs Epochs
@@ -77,8 +70,7 @@ Loss vs Epochs            |  Val. Acc. vs Epochs
 
 #### Testing
 
-- the trained models of training process can be found at [here](https://github.com/xiaoyufenfei/LEDNet/save/). This may not be the best one, you can train one from scratch by yourself or Fine-tuning the training decoder with  model encoder pre-trained on ImageNet, For instance
-
+- After training, the checkpoint will be saved at `checkpoint` folder.
 ```
 python test.py --dataset ${camvid, cityscapes} --checkpoint ${CHECKPOINT_FILE}
 ```
