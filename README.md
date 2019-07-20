@@ -79,6 +79,10 @@ python train.py --dataset camvid --train_type trainval
 python train.py --dataset camvid --train_type trainval --lr 1e-3 --batch_size 16
 ```
 
+During training course, every 50 epochs, the mIoU of Train set, Val set and training loss will be recorded
+And a figure will be ploted, so you can check wheather the training process is normal.
+
+
 
 #### Resuming-training-if-decoder-part-broken
 
