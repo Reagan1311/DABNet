@@ -16,7 +16,7 @@ As a pixel-level prediction task, semantic segmentation needs large computationa
 You need to download two dataset, and put the files in the dataset folder with following structure.
 - You can download [cityscapes](https://www.cityscapes-dataset.com/) from [here](https://www.cityscapes-dataset.com/downloads/). Note: please download [leftImg8bit_trainvaltest.zip(11GB)](https://www.cityscapes-dataset.com/file-handling/?packageID=4) and [gtFine_trainvaltest(241MB)](https://www.cityscapes-dataset.com/file-handling/?packageID=1).
 - You can download [CityscapesScripts](https://github.com/mcordts/cityscapesScripts), and convert the dataset to [19 categories](https://github.com/mcordts/cityscapesScripts/blob/master/cityscapesscripts/helpers/labels.py). It should have this basic structure.
-  ```
+```
 ├── camvid
      ├── train
      ├── test
@@ -61,19 +61,27 @@ cd LEDNet-master
 - Note: For training, we currently support [cityscapes](https://www.cityscapes-dataset.com/) , aim to add [Camvid](https://github.com/alexgkendall/SegNet-Tutorial/tree/master/CamVid)  and  [VOC](http://host.robots.ox.ac.uk/pascal/VOC/)  and  [ADE20K](http://groups.csail.mit.edu/vision/datasets/ADE20K/)  dataset
 
 
-#### Training-LEDNet
+#### Training
 
-- For help on the optional arguments you can run: `python main.py -h`
+- For help on the optional arguments you can run: `python train.py -h`
+Basically, in the train.py, you can set the dataset, train_type (on train or ontrainval)
 
-- By default, we assume you have downloaded the cityscapes dataset in the `./data/cityscapes` dir.
-- To train LEDNet using the train/main.py script the parameters listed in `main.py` as a flag or manually change them.
+- train on Cityscapes dataset
 ```
-python main.py --savedir logs --model lednet --datadir path/root_directory/  --num-epochs xx --batch-size xx ...
+python train.py --dataset cityscapes 
 ```
+- train on Cityscapes dataset (trainval)
+```
+python train.py --dataset camvid --train_type trainval
+```
+- train on CamVid dataset (trainval)
+```
+python train.py --dataset camvid --train_type trainval --lr 1e-3 --batch_size 16
+```
+
 
 #### Resuming-training-if-decoder-part-broken
 
-- for help on the optional arguments you can run: `python main.py -h`
 
 ```
 python main.py --savedir logs --name lednet --datadir path/root_directory/  --num-epochs xx --batch-size xx --decoder --state "../save/logs/model_best_enc.pth.tar"...
