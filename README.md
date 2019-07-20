@@ -82,6 +82,10 @@ python train.py --dataset camvid --train_type trainval --lr 1e-3 --batch_size 16
 During training course, every 50 epochs, the mIoU of Train set, Val set and training loss will be recorded
 And a figure will be ploted, so you can check wheather the training process is normal.
 
+Loss vs Epochs            |  Val. Acc. vs Epochs
+:-------------------------:|:-------------------------:
+![alt text-1](https://github.com/Reagan1311/DABNet/blob/master/image/iou_vs_epochs.png)  |  ![alt text-2](https://github.com/Reagan1311/DABNet/blob/master/image/loss_vs_epochs.png)
+
 
 
 #### Resuming-training-if-decoder-part-broken
