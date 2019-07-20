@@ -61,7 +61,7 @@ python train.py --dataset cityscapes
 ```
 python train.py --dataset camvid --train_type trainval --max_epochs 1000 --lr 1e-3 --batch_size 16
 ```
-- During training course, every 50 epochs, the mIoU of train set, validation set and training loss will be recorded and draw a plot, so you can check whether the training process is normal.
+- During training course, every 50 epochs, we will record the mean IoU of train set, validation set and training loss to draw a plot, so you can check whether the training process is normal.
 
 Loss vs Epochs            |  Val. Acc. vs Epochs
 :-------------------------:|:-------------------------:
