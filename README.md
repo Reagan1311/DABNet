@@ -64,8 +64,11 @@ cd LEDNet-master
 #### Training
 
 - For help on the optional arguments you can run: `python train.py -h`
-Basically, in the train.py, you can set the dataset, train_type (on train or ontrainval)
-
+Basically, in the train.py, you can set the dataset, train_type (on train or ontrainval).
+```
+python train.py --dataset ${camvid, cityscapes} --train_type ${train, trainval} --max_epochs ${EPOCHS}
+```
+##### Here are some examples:
 - train on Cityscapes dataset
 ```
 python train.py --dataset cityscapes 
@@ -86,20 +89,12 @@ Loss vs Epochs            |  Val. Acc. vs Epochs
 ![alt text-1](https://github.com/Reagan1311/DABNet/blob/master/image/iou_vs_epochs.png)  |  ![alt text-2](https://github.com/Reagan1311/DABNet/blob/master/image/loss_vs_epochs.png)
 
 
-
-#### Resuming-training-if-decoder-part-broken
-
-
-```
-python main.py --savedir logs --name lednet --datadir path/root_directory/  --num-epochs xx --batch-size xx --decoder --state "../save/logs/model_best_enc.pth.tar"...
-```
-
 #### Testing
 
 - the trained models of training process can be found at [here](https://github.com/xiaoyufenfei/LEDNet/save/). This may not be the best one, you can train one from scratch by yourself or Fine-tuning the training decoder with  model encoder pre-trained on ImageNet, For instance
 
 ```
-more details refer ./test/README.md
+python test.py --dataset ${camvid, cityscapes} --checkpoint ${CHECKPOINT_FILE}
 ```
 
 #### Results
