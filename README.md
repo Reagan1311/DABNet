@@ -105,7 +105,7 @@ more details refer ./test/README.md
 
 qualitative segmentation result examples:
 
-<p align="center"><img width="100%" src="./images/LEDNet_demo.png" /></p>
+<p align="center"><img width="100%" src="./image/DABNet_demo.png" /></p>
 
 #### Citation
 
