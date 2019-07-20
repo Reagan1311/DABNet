@@ -13,7 +13,7 @@ This project contains the code for:  [**DABNet: Depth-wise Asymmetric Bottleneck
 As a pixel-level prediction task, semantic segmentation needs large computational cost with enormous parameters to obtain high performance. Recently, due to the increasing demand for autonomous systems and robots, it is significant to make a tradeoff between accuracy and inference speed. In this paper, we propose a novel Depthwise Asymmetric Bottleneck (DAB) module to address this dilemma, which efficiently adopts depth-wise asymmetric convolution and dilated convolution to build a bottleneck structure. Based on the DAB module, we design a Depth-wise Asymmetric Bottleneck Network (DABNet) especially for real-time semantic segmentation, which creates sufficient receptive field and densely utilizes the contextual information. Experiments on Cityscapes and CamVid datasets demonstrate that the proposed DABNet achieves a balance between speed and precision. Specifically, without any pretrained model and postprocessing, it achieves 70.1% Mean IoU on the Cityscapes test dataset with only 0.76 million parameters and a speed of 104 FPS on a single GTX 1080Ti card.
 
 #### Installation
-- Python 3.6; PyTorch_1.1; CUDA 9.0; cuDNN V7
+- Python 3.6; PyTorch 1.0; CUDA 9.0; cuDNN V7
 - numpy, matplotlib
 - Clone this repository.
 ```
