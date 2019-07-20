@@ -79,8 +79,7 @@ python train.py --dataset camvid --train_type trainval
 python train.py --dataset camvid --train_type trainval --lr 1e-3 --batch_size 16
 ```
 
-During training course, every 50 epochs, the mIoU of train set, validation set and training loss will be recorded  
-Then a figure will be ploted, so you can check wheather the training process is normal.  
+- During training course, every 50 epochs, the mIoU of train set, validation set and training loss will be recorded and draw a plot, so you can check whether the training process is normal.
 
 Loss vs Epochs            |  Val. Acc. vs Epochs
 :-------------------------:|:-------------------------:
