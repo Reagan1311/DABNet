@@ -2,7 +2,7 @@
 
 ### Introduction
 
-This project contains the code for the proposed DABNet: [arXiv](https://arxiv.org/pdf/1905.02423.pdf) by [Gen Li](https://github.com/Reagan1311).
+This project contains the Pytorch implementation for the proposed DABNet: [arXiv](https://arxiv.org/pdf/1905.02423.pdf).
 
 <p align="center"><img width="100%" src="./image/architecture.png" /></p>
 
