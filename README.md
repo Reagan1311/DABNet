@@ -4,25 +4,13 @@
 [![pytorch-image]][pytorch-url]
 [![lic-image]][lic-url]
 
-#### Table of Contents:
-- <a href='#Introduction'>Introduction</a>
-- <a href='#Project-Structure'>Project Structure</a>
-- <a href='#Installation'>Installation</a>
-- <a href='#Datasets'>Datasets</a>
-- <a href='#Training-LEDNet'>Train</a>
-- <a href='#Resuming-training-if-decoder-part-broken'>Resuming training</a>
-- <a href='#Testing'>Test</a>
-- <a href='#Results'>Results</a>
-- <a href='#Citation'>Reference</a>
-- <a href='#Tips'>Tips</a>
-
 #### Introduction
 
-This project contains the code (Note: The code is test in the environment with python=3.6, cuda=9.0, PyTorch-0.4.1, also support Pytorch-0.4.1+) for:  [**LEDNet: A Lightweight Encoder-Decoder Network for Real-time Semantic Segmentation**](https://arxiv.org/pdf/1905.02423.pdf)  by [Yu Wang](https://github.com/xiaoyufenfei).
+This project contains the code for:  [**DABNet: Depth-wise Asymmetric Bottleneck for Real-time Semantic Segmentation**](https://arxiv.org/pdf/1905.02423.pdf)  by [Yu Wang](https://github.com/xiaoyufenfei).
 
-<p align="center"><img width="100%" src="./images/LEDNet_overview.png" /></p>
+<p align="center"><img width="100%" src="./image/structure.png" /></p>
 
-The extensive computational burden limits the usage of CNNs in mobile devices for dense estimation tasks, a.k.a semantic segmentation. In this paper, we present a lightweight network to address this problem, namely **LEDNet**, which employs an asymmetric encoder-decoder architecture for the task of real-time semantic segmentation.More specifically, the encoder adopts a ResNet as backbone network, where two new operations, channel split and shuffle, are utilized in each residual block to greatly reduce computation cost while maintaining higher segmentation accuracy. On the other hand, an attention pyramid network (APN) is employed in the decoder to further lighten the entire network complexity. Our model has less than 1M parameters, and is able to run at over 71 FPS on a single GTX 1080Ti GPU card. The comprehensive experiments demonstrate that our approach achieves state-of-the-art results in terms of speed and accuracy trade-off on Cityscapes dataset. and becomes an effective method for real-time semantic segmentation tasks.
+As a pixel-level prediction task, semantic segmentation needs large computational cost with enormous parameters to obtain high performance. Recently, due to the increasing demand for autonomous systems and robots, it is significant to make a tradeoff between accuracy and inference speed. In this paper, we propose a novel Depthwise Asymmetric Bottleneck (DAB) module to address this dilemma, which efficiently adopts depth-wise asymmetric convolution and dilated convolution to build a bottleneck structure. Based on the DAB module, we design a Depth-wise Asymmetric Bottleneck Network (DABNet) especially for real-time semantic segmentation, which creates sufficient receptive field and densely utilizes the contextual information. Experiments on Cityscapes and CamVid datasets demonstrate that the proposed DABNet achieves a balance between speed and precision. Specifically, without any pretrained model and postprocessing, it achieves 70.1% Mean IoU on the Cityscapes test dataset with only 0.76 million parameters and a speed of 104 FPS on a single GTX 1080Ti card.
 
 #### Project-Structure
 You should make the dataset structure like this.
