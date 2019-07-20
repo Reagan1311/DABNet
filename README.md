@@ -99,7 +99,7 @@ python test.py --dataset ${camvid, cityscapes} --checkpoint ${CHECKPOINT_FILE}
 
 #### Results
 
-- quantitative result [Cityscapes official evaluation](https://www.cityscapes-dataset.com/anonymous-results/?id=16896cc219a6d5af875f8aa3d528a0f7c4ce57644aece957938eae9062ed8070)
+- quantitative result: [Cityscapes official evaluation](https://www.cityscapes-dataset.com/anonymous-results/?id=16896cc219a6d5af875f8aa3d528a0f7c4ce57644aece957938eae9062ed8070)
 
 - qualitative segmentation examples:
 
