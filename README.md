@@ -1,9 +1,5 @@
 # [DABNet: Depth-wise Asymmetric Bottleneck for Real-time Semantic Segmentation](https://github.com/Reagan1311/DABNet)
 
-[![python-image]][python-url]
-[![pytorch-image]][pytorch-url]
-[![lic-image]][lic-url]
-
 ### Introduction
 
 This project contains the code for the proposed DABNet: [arXiv](https://arxiv.org/pdf/1905.02423.pdf) by [Gen Li](https://github.com/Reagan1311).
@@ -95,28 +91,3 @@ If you find this code useful for your research, please use the following BibTeX 
   year={2019}
 }
 ```
-
-### Tips
-
-- Limited by GPU resources, the project results need to be further improved...
-- It is recommended to pre-train Encoder on ImageNet and then Fine-turning Decoder part. The result will be better.
-
-### Reference
-
-1. [**Deep residual learning for image recognition**](https://arxiv.org/pdf/1512.03385.pdf)
-2. [**Enet: A deep neural network architecture for real-time semantic segmentation**](https://arxiv.org/pdf/1606.02147.pdf)
-3. [**Erfnet: Efficient residual factorized convnet for real-time semantic segmentation**](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8063438)
-4. [**Shufflenet: An extremely efficient convolutional neural network for mobile devices**](https://arxiv.org/pdf/1707.01083.pdf)
-
-<!--
-[![python-image]][python-url]
-[![pytorch-image]][pytorch-url]
-[![lic-image]][lic-url]
--->
-
-[python-image]: https://img.shields.io/badge/Python-3.x-ff69b4.svg
-[python-url]: https://www.python.org/
-[pytorch-image]: https://img.shields.io/badge/PyTorch-1.0-2BAF2B.svg
-[pytorch-url]: https://pytorch.org/
-[lic-image]: https://img.shields.io/aur/license/pac.svg
-[lic-url]: https://github.com/xiaoyufenfei/LEDNet/blob/master/LICENSE
