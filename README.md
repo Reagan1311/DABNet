@@ -70,6 +70,13 @@ Loss vs Epochs            |  Val. Acc. vs Epochs
 python test.py --dataset ${camvid, cityscapes} --checkpoint ${CHECKPOINT_FILE}
 ```
 
+### Inference Speed
+
+- You can run the `eval_fps.py` to test the model inference speed, input the image size like `512,1024`
+```
+python eval_fps.py 512,1024
+```
+
 ### Results
 
 - quantitative result: [Cityscapes official evaluation](https://www.cityscapes-dataset.com/anonymous-results/?id=16896cc219a6d5af875f8aa3d528a0f7c4ce57644aece957938eae9062ed8070)
