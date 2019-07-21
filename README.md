@@ -42,7 +42,7 @@ You need to download the two dataset——CamVid and Cityscapes, and put the fil
 
 ### Training
 
-- For help on the optional arguments you can run: `python train.py -h`.
+- You can run: `python train.py -h` to check the detail of optional arguments.
 Basically, in the `train.py`, you can set the dataset, train_type (on train or ontrainval).
 ```
 python train.py --dataset ${camvid, cityscapes} --train_type ${train, trainval} --max_epochs ${EPOCHS} --batch_size ${BATCH_SIZE} --lr ${LR}  --resume ${CHECKPOINT_FILE}
