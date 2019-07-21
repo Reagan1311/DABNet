@@ -48,7 +48,7 @@ Basically, in the `train.py`, you can set the dataset, train_type (on train or o
 python train.py --dataset ${camvid, cityscapes} --train_type ${train, trainval} --max_epochs ${EPOCHS} --batch_size ${BATCH_SIZE} --lr ${LR}  --resume ${CHECKPOINT_FILE}
 ```
 #### Here are some examples:
-- train on Cityscapes dataset
+- train on Cityscapes dataset (train)
 ```
 python train.py --dataset cityscapes
 ```
