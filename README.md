@@ -62,15 +62,20 @@ Loss vs Epochs            |  Val. Acc. vs Epochs
 ![alt text-1](https://github.com/Reagan1311/DABNet/blob/master/image/iou_vs_epochs.png)  |  ![alt text-2](https://github.com/Reagan1311/DABNet/blob/master/image/loss_vs_epochs.png)
 
 (PS: Based on the graphs, we think that training is not saturated yet, maybe the LR is too large, so you can change the hyper-parameter to get better result)
-### Testing
 
+### Testing
 - After training, the checkpoint will be saved at `checkpoint` folder.
 ```
 python test.py --dataset ${camvid, cityscapes} --checkpoint ${CHECKPOINT_FILE}
 ```
+### Evaluation
+- For those dataset that do not provide label on the test set (e.g. Cityscapes), you can use `predict.py` to predict and save all the output images, then submit to official webpage for evaluation.
+```
+python predict.py 
+```
+
 
 ### Inference Speed
-
 - You can run the `eval_fps.py` to test the model inference speed, input the image size such as `512,1024`
 ```
 python eval_fps.py 512,1024
