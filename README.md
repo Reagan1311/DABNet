@@ -64,7 +64,7 @@ Loss vs Epochs            |  Val. Acc. vs Epochs
 (PS: Based on the graphs, we think that training is not saturated yet, maybe the LR is too large, so you can change the hyper-parameter to get better result)
 
 ### Testing
-- After training, the checkpoint will be saved at `checkpoint` folder.
+- After training, the checkpoint will be saved at `checkpoint` folder, you can use `test.py` to get the result.
 ```
 python test.py --dataset ${camvid, cityscapes} --checkpoint ${CHECKPOINT_FILE}
 ```
