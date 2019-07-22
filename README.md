@@ -1,5 +1,4 @@
-# [DABNet: Depth-wise Asymmetric Bottleneck for Real-time Semantic Segmentation](https://github.com/Reagan1311/DABNet)
-
+# DABNet: Depth-wise Asymmetric Bottleneck for Real-time Semantic Segmentation
 This project contains the Pytorch implementation for the proposed DABNet: [arXiv](https://arxiv.org/pdf/1905.02423.pdf).
 
 ### Introduction
