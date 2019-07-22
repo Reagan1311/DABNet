@@ -8,8 +8,11 @@ As a pixel-level prediction task, semantic segmentation needs large computationa
 
 ### Installation
 - Env: Python 3.6; PyTorch 1.0; CUDA 9.0; cuDNN V7
-- Requirements: numpy; matplotlib
-- Clone this repository.
+- install some packages：
+```
+pip install opencv-python pillow numpy matplotlib 
+```
+- Clone this repository
 ```
 git clone https://github.com/Reagan1311/DABNet
 cd DABNet
