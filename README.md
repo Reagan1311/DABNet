@@ -61,7 +61,7 @@ Loss vs Epochs            |  Val. Acc. vs Epochs
 :-------------------------:|:-------------------------:
 ![alt text-1](https://github.com/Reagan1311/DABNet/blob/master/image/iou_vs_epochs.png)  |  ![alt text-2](https://github.com/Reagan1311/DABNet/blob/master/image/loss_vs_epochs.png)
 
-(PS: Based on the figures, we think model training is not saturated yet, maybe the LR is too large, so you can change the hyper-parameter to get better result)
+(PS: Based on the graphs, we think that training is not saturated yet, maybe the LR is too large, so you can change the hyper-parameter to get better result)
 ### Testing
 
 - After training, the checkpoint will be saved at `checkpoint` folder.
