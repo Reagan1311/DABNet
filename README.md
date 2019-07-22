@@ -1,5 +1,5 @@
 # DABNet: Depth-wise Asymmetric Bottleneck for Real-time Semantic Segmentation
-This project contains the Pytorch implementation for the proposed DABNet: [arXiv](https://arxiv.org/pdf/1905.02423.pdf).
+This project contains the Pytorch implementation for the proposed DABNet: [[arXiv]](https://arxiv.org/pdf/1905.02423.pdf).
 
 ### Introduction
 <p align="center"><img width="100%" src="./image/architecture.png" /></p>
@@ -71,7 +71,7 @@ python test.py --dataset ${camvid, cityscapes} --checkpoint ${CHECKPOINT_FILE}
 
 ### Inference Speed
 
-- You can run the `eval_fps.py` to test the model inference speed, input the image size like `512,1024`
+- You can run the `eval_fps.py` to test the model inference speed, input the image size such as `512,1024`
 ```
 python eval_fps.py 512,1024
 ```
