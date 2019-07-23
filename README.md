@@ -8,7 +8,7 @@ As a pixel-level prediction task, semantic segmentation needs large computationa
 
 ### Installation
 - Env: Python 3.6; PyTorch 1.0; CUDA 9.0; cuDNN V7
-- install some packages：
+- Install some packages：
 ```
 pip install opencv-python pillow numpy matplotlib 
 ```
