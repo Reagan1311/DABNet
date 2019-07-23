@@ -74,7 +74,7 @@ python test.py --dataset ${camvid, cityscapes} --checkpoint ${CHECKPOINT_FILE}
 ### Evaluation
 - For those dataset that do not provide label on the test set (e.g. Cityscapes), you can use `predict.py` to predict and save all the output images, then submit to official webpage for evaluation.
 ```
-python predict.py 
+python predict.py --checkpoint ${CHECKPOINT_FILE}
 ```
 
 
