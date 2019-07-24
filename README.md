@@ -105,7 +105,7 @@ If you find this code useful for your research, please use the following BibTeX 
 }
 ```
 ### Thanks to the Third Party Libs
-[Pytorch](https://github.com/pytorch/pytorch)
-[Pytorch-Deeplab](https://github.com/speedinghzl/Pytorch-Deeplab)
-[ERFNet](https://github.com/Eromera/erfnet_pytorch)
-[CGNet](https://github.com/wutianyiRosun/CGNet)
+[Pytorch](https://github.com/pytorch/pytorch)  
+[Pytorch-Deeplab](https://github.com/speedinghzl/Pytorch-Deeplab)  
+[ERFNet](https://github.com/Eromera/erfnet_pytorch)  
+[CGNet](https://github.com/wutianyiRosun/CGNet)  
