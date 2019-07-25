@@ -8,7 +8,7 @@ As a pixel-level prediction task, semantic segmentation needs large computationa
 
 ### Installation
 - Env: Python 3.6; PyTorch 1.0; CUDA 9.0; cuDNN V7
-- Install some packages：
+- Install some packages
 ```
 pip install opencv-python pillow numpy matplotlib 
 ```
@@ -45,9 +45,9 @@ You need to download the two dataset——CamVid and Cityscapes, and put the fil
 ### Training
 
 - You can run: `python train.py -h` to check the detail of optional arguments.
-Basically, in the `train.py`, you can set the dataset, train_type (on train or ontrainval).
+Basically, in the `train.py`, you can set the dataset, train type, epochs and batch size.
 ```
-python train.py --dataset ${camvid, cityscapes} --train_type ${train, trainval} --max_epochs ${EPOCHS} --batch_size ${BATCH_SIZE} --lr ${LR}  --resume ${CHECKPOINT_FILE}
+python train.py --dataset ${camvid, cityscapes} --train_type ${train, trainval} --max_epochs ${EPOCHS} --batch_size ${BATCH_SIZE} --lr ${LR} --resume ${CHECKPOINT_FILE}
 ```
 #### Here are some examples:
 - train on Cityscapes dataset (train)
