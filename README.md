@@ -54,7 +54,7 @@ python train.py --dataset ${camvid, cityscapes} --train_type ${train, trainval} 
 ```
 python train.py --dataset cityscapes
 ```
-- train on CamVid dataset (trainval)
+- train on CamVid dataset (trainval), model training weight: [DABNet_camvid](https://drive.google.com/open?id=1OuiYh1VDPVc2jkT_UDJ9rE4meAutc4bv)
 ```
 python train.py --dataset camvid --train_type trainval --max_epochs 1000 --lr 1e-3 --batch_size 16
 ```
