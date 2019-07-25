@@ -72,7 +72,7 @@ Val mIoU vs Epochs            |  Train loss vs Epochs
 python test.py --dataset ${camvid, cityscapes} --checkpoint ${CHECKPOINT_FILE}
 ```
 ### Evaluation
-- For those dataset that do not provide label on the test set (e.g. Cityscapes), you can use `predict.py` to predict and save all the output images, then submit to official webpage for evaluation.
+- For those dataset that do not provide label on the test set (e.g. Cityscapes), you can use `predict.py` to save all the output images, then submit to official webpage for evaluation.
 ```
 python predict.py --checkpoint ${CHECKPOINT_FILE}
 ```
@@ -94,7 +94,7 @@ python eval_fps.py 512,1024
 
 ### Citation
 
-If you find this code useful for your research, please use the following BibTeX entry.
+Please consider citing the [DABNet]() if it's helpful for your research:
 
 ```
  @article{wang2019lednet,
