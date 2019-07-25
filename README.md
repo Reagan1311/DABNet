@@ -86,7 +86,7 @@ python eval_fps.py 512,1024
 
 ### Results
 
-- quantitative result: [Cityscapes official evaluation](https://www.cityscapes-dataset.com/anonymous-results/?id=16896cc219a6d5af875f8aa3d528a0f7c4ce57644aece957938eae9062ed8070)
+- quantitative result with only cityscapes fine dataset, train from scratch [Cityscapes official evaluation](https://www.cityscapes-dataset.com/anonymous-results/?id=16896cc219a6d5af875f8aa3d528a0f7c4ce57644aece957938eae9062ed8070)
 
 - qualitative segmentation examples:
 
