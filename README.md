@@ -60,7 +60,7 @@ python train.py --dataset camvid --train_type trainval --max_epochs 1000 --lr 1e
 ```
 - During training course, every 50 epochs, we will record the mean IoU of train set, validation set and training loss to draw a plot, so you can check whether the training process is normal.
 
-Loss vs Epochs            |  Val. Acc. vs Epochs
+Val mIoU vs Epochs            |  Train loss vs Epochs
 :-------------------------:|:-------------------------:
 ![alt text-1](https://github.com/Reagan1311/DABNet/blob/master/image/iou_vs_epochs.png)  |  ![alt text-2](https://github.com/Reagan1311/DABNet/blob/master/image/loss_vs_epochs.png)
 
