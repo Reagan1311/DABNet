@@ -94,7 +94,7 @@ python eval_fps.py 512,1024
 
 ### Citation
 
-Please consider citing the [DABNet]() if it's helpful for your research:
+Please consider citing the [DABNet]() if it's helpful for your research.
 
 ```
  @article{wang2019lednet,
