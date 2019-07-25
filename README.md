@@ -50,11 +50,11 @@ Basically, in the `train.py`, you can set the dataset, train type, epochs and ba
 python train.py --dataset ${camvid, cityscapes} --train_type ${train, trainval} --max_epochs ${EPOCHS} --batch_size ${BATCH_SIZE} --lr ${LR} --resume ${CHECKPOINT_FILE}
 ```
 #### Here are some examples:
-- train on Cityscapes dataset (train)
+- train on Cityscapes dataset (train), [DABNet_cityscapes](https://drive.google.com/open?id=1ZKGBQogSqxyKD-QIJgzyDXw2TR0HUePA) with 69.57 mIoU
 ```
 python train.py --dataset cityscapes
 ```
-- train on CamVid dataset (trainval), model training weight: [DABNet_camvid](https://drive.google.com/open?id=1OuiYh1VDPVc2jkT_UDJ9rE4meAutc4bv)
+- train on CamVid dataset (trainval), [DABNet_camvid](https://drive.google.com/open?id=1OuiYh1VDPVc2jkT_UDJ9rE4meAutc4bv)  with 66.53 mIoU
 ```
 python train.py --dataset camvid --train_type trainval --max_epochs 1000 --lr 1e-3 --batch_size 16
 ```
