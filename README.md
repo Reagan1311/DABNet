@@ -79,7 +79,7 @@ python predict.py --checkpoint ${CHECKPOINT_FILE}
 
 
 ### Inference Speed
-- You can run the `eval_fps.py` to test the model inference speed, input the image size such as `512,1024`
+- You can run the `eval_fps.py` to test the model inference speed, input the image size such as `512,1024`, make sure your GPU resources are clear
 ```
 python eval_fps.py 512,1024
 ```
