@@ -17,6 +17,7 @@ pip install opencv-python pillow numpy matplotlib
 git clone https://github.com/Reagan1311/DABNet
 cd DABNet
 ```
+- One GPU with 11GB is needed
 
 ### Dataset
 You need to download the two dataset——CamVid and Cityscapes, and put the files in the `dataset` folder with following structure.
