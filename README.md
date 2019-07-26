@@ -55,7 +55,7 @@ python train.py --dataset ${camvid, cityscapes} --train_type ${train, trainval} 
 ```
 python train.py --dataset cityscapes
 ```
-- train on CamVid train and val set, [[model]](https://drive.google.com/open?id=1EPyv9-FUQwr_23w3kLwwiFKD13uRyFRk)  with 66.53 mIoU
+- train on CamVid train and val set, [[model]](https://drive.google.com/open?id=1EPyv9-FUQwr_23w3kLwwiFKD13uRyFRk)  with 66.72 mIoU
 ```
 python train.py --dataset camvid --train_type trainval --max_epochs 1000 --lr 1e-3 --batch_size 16
 ```
