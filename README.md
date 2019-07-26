@@ -98,12 +98,6 @@ python eval_fps.py 512,1024
 Please consider citing the [DABNet]() if it's helpful for your research.
 
 ```
- @article{wang2019lednet,
-  title={LEDNet: A Lightweight Encoder-Decoder Network for Real-time Semantic Segmentation},
-  author={Wang, Yu and Zhou, Quan and Liu, Jia and Xiong，Jian and Gao, Guangwei and Wu, Xiaofu, and Latecki Jan Longin},
-  journal={arXiv preprint arXiv:1905.02423},
-  year={2019}
-}
 ```
 ### Thanks to the Third Party Libs
 [Pytorch](https://github.com/pytorch/pytorch)  
