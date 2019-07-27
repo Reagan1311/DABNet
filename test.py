@@ -150,7 +150,6 @@ if __name__ == '__main__':
     parser = ArgumentParser()
     parser.add_argument('--model', default="DABNet", help="model name: Context Guided Network (CGNet)")
     parser.add_argument('--dataset', default="cityscapes", help="dataset: cityscapes or camvid")
-    parser.add_argument('--scaleIn', type=int, default=1, help="rescale input image, default is 1, keep fixed size")
     parser.add_argument('--num_workers', type=int, default=1, help="the number of parallel threads")
     parser.add_argument('--batch_size', type=int, default=1,
                         help=" the batch_size is set to 1 when evaluating or testing")
