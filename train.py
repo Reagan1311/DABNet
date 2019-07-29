@@ -242,9 +242,10 @@ def train_model(args):
 
         if epoch >= args.max_epochs - 10:
             torch.save(state, model_file_name)
-        elif not epoch % 10:
+        elif not epoch % 20:
             torch.save(state, model_file_name)
 
+        # draw plots for visualization
         if epoch % 50 == 0 or epoch == (args.max_epochs - 1):
             # Plot the figures per 50 epochs
             fig1, ax1 = plt.subplots(figsize=(11, 8))
@@ -282,7 +283,6 @@ if __name__ == '__main__':
                         help="ontrain for training on train set, ontrainval for training on train+val set")
     parser.add_argument('--max_epochs', type=int, default=1000,
                         help="the number of epochs: 300 for train set, 350 for train+val set")
-    parser.add_argument('--scaleIn', type=int, default=1, help="for input image, default is 1, keep fixed size")
     parser.add_argument('--input_size', type=str, default="512,1024", help="input size of model")
     parser.add_argument('--random_mirror', type=bool, default=True, help="input image random mirror")
     parser.add_argument('--random_scale', type=bool, default=True, help="input image resize 0.5 to 2")
@@ -297,7 +297,6 @@ if __name__ == '__main__':
     parser.add_argument('--logFile', default="log.txt", help="storing the training and validation logs")
     parser.add_argument('--cuda', type=bool, default=True, help="running on CPU or GPU")
     parser.add_argument('--gpus', type=str, default="0", help="default GPU devices (0,1)")
-    parser.add_argument('--iouTrain', type=bool, default=False, help='compute the iou of training set')
     args = parser.parse_args()
 
     if args.dataset == 'cityscapes':

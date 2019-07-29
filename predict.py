@@ -105,5 +105,8 @@ if __name__ == '__main__':
         args.classes = 19
     elif args.dataset == 'camvid':
         args.classes = 11
+    else:
+        raise NotImplementedError(
+            "This repository now supports two datasets: cityscapes and camvid, %s is not included" % args.dataset)
 
     test_model(args)
