@@ -1,5 +1,5 @@
 # DABNet: Depth-wise Asymmetric Bottleneck for Real-time Semantic Segmentation
-This project contains the Pytorch implementation for the proposed DABNet: [[arXiv]]().
+This project contains the Pytorch implementation for the proposed DABNet: [[arXiv]](https://arxiv.org/abs/1907.11357).
 
 ### Introduction
 <p align="center"><img width="100%" src="./image/architecture.png" /></p>
@@ -50,12 +50,11 @@ Basically, in the `train.py`, you can set the dataset, train type, epochs and ba
 ```
 python train.py --dataset ${camvid, cityscapes} --train_type ${train, trainval} --max_epochs ${EPOCHS} --batch_size ${BATCH_SIZE} --lr ${LR} --resume ${CHECKPOINT_FILE}
 ```
-#### Model weight and examples
-- train on Cityscapes train set, [[model]](https://drive.google.com/open?id=1ZKGBQogSqxyKD-QIJgzyDXw2TR0HUePA) with 69.57 mIoU
+- training on Cityscapes train set
 ```
 python train.py --dataset cityscapes
 ```
-- train on CamVid train and val set, [[model]](https://drive.google.com/open?id=1EPyv9-FUQwr_23w3kLwwiFKD13uRyFRk)  with 66.72 mIoU
+- training on CamVid train and val set
 ```
 python train.py --dataset camvid --train_type trainval --max_epochs 1000 --lr 1e-3 --batch_size 16
 ```
@@ -87,7 +86,13 @@ python eval_fps.py 512,1024
 
 ### Results
 
-- quantitative result with only cityscapes fine dataset, train from scratch: [Cityscapes official evaluation](https://www.cityscapes-dataset.com/anonymous-results/?id=16896cc219a6d5af875f8aa3d528a0f7c4ce57644aece957938eae9062ed8070)
+- quantitative results:
+
+|Dataset|Pretrained|Train type|mIoU|FPS|model|
+|:-:|:-:|:-:|:-:|:-:|:-:|
+|Cityscapes(Fine)|from scratch|trainval|**70.07​%**|104|[Detailed result](https://www.cityscapes-dataset.com/anonymous-results/?id=16896cc219a6d5af875f8aa3d528a0f7c4ce57644aece957938eae9062ed8070)|
+|Cityscapes(Fine)|from scratch|train|**69.57​%**|104|[GoogleDrive](https://drive.google.com/open?id=1ZKGBQogSqxyKD-QIJgzyDXw2TR0HUePA)|
+|CamVid|from scratch|trainval|**66.72​%**|146|[GoogleDrive](https://drive.google.com/open?id=1EPyv9-FUQwr_23w3kLwwiFKD13uRyFRk)|
 
 - qualitative segmentation examples:
 
@@ -95,7 +100,7 @@ python eval_fps.py 512,1024
 
 ### Citation
 
-Please consider citing the [DABNet]() if it's helpful for your research.
+Please consider citing the [DABNet](https://arxiv.org/abs/1907.11357) if it's helpful for your research.
 
 ```
 ```
