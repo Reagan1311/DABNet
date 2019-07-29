@@ -83,9 +83,9 @@ def test_model(args):
                 checkpoint = torch.load(args.checkpoint)
                 model.load_state_dict(checkpoint['model'])
                 # model.load_state_dict(convert_state_dict(checkpoint['model']))
-        else:
-            print("=====> no checkpoint found at '{}'".format(args.checkpoint))
-            raise FileNotFoundError("no checkpoint found at '{}'".format(args.checkpoint))
+            else:
+                print("=====> no checkpoint found at '{}'".format(args.checkpoint))
+                raise FileNotFoundError("no checkpoint found at '{}'".format(args.checkpoint))
 
         print("=====> beginning validation")
         print("validation set length: ", len(testLoader))

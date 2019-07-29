@@ -161,14 +161,12 @@ class DABNet(nn.Module):
 
         # DAB Block 1
         output1_0 = self.downsample_1(output0_cat)
-        output1 = output1_0
-        output1 = self.DAB_Block_1(output1)
+        output1 = self.DAB_Block_1(output1_0)
         output1_cat = self.bn_prelu_2(torch.cat([output1, output1_0, down_2], 1))
 
         # DAB Block 2
         output2_0 = self.downsample_2(output1_cat)
-        output2 = output2_0
-        output2 = self.DAB_Block_2(output2)
+        output2 = self.DAB_Block_2(output2_0)
         output2_cat = self.bn_prelu_3(torch.cat([output2, output2_0, down_3], 1))
 
         out = self.classifier(output2_cat)
