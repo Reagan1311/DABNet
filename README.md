@@ -102,6 +102,12 @@ python eval_fps.py 512,1024
 
 Please consider citing the [DABNet](https://arxiv.org/abs/1907.11357) if it's helpful for your research.
 ```
+@inproceedings{li2019dabnet,
+  title={DABNet: Depth-wise Asymmetric Bottleneck for Real-time Semantic Segmentation},
+  author={Li, Gen and Yun, Inyong and Kim, Jonghyun and Kim, Joongkyu},
+  booktitle={British Machine Vision Conference},
+  year={2019}
+}
 ```
 ### Thanks to the Third Party Libs
 [Pytorch](https://github.com/pytorch/pytorch)  
