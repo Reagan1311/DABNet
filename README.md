@@ -104,7 +104,7 @@ Please consider citing the [DABNet](https://arxiv.org/abs/1907.11357) if it's he
 ```
 @inproceedings{li2019dabnet,
   title={DABNet: Depth-wise Asymmetric Bottleneck for Real-time Semantic Segmentation},
-  author={Li, Gen and Yun, Inyong and Kim, Jonghyun and Kim, Joongkyu},
+  author={Li, Gen and Kim, Joongkyu},
   booktitle={British Machine Vision Conference},
   year={2019}
 }
